@@ -58,7 +58,7 @@ chk = []
 l=[1,2,3,4,5,6,7,8,9]
 x=2
 while x==2:
-  os.system('clear')
+  os.system('cls' if os.name == 'nt' else 'clear')
   tictac(chk)
   box=int(input("\nWhich box do you want to enter:"))
   if box not in l:
@@ -67,18 +67,18 @@ while x==2:
   l.remove(box)
   x=win(chk)
   if x==1:
-    os.system('clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
     tictac(chk)
     print("\nUser 2 won")
     break
   elif x==0:
-    os.system('clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
     tictac(chk)
     print("\nUser 1 won")
     break
   if len(chk)==9:
     break
 if len(chk)==9 and x==2:
-  os.system('clear')
+  os.system('cls' if os.name == 'nt' else 'clear')
   tictac(chk)
   print("\nmatch is a draw")
